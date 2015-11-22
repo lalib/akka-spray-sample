@@ -9,6 +9,8 @@ import com.bilalalp.akkakafka.service.ServiceOperation.FIND_ALL
 import org.json4s.DefaultFormats
 import spray.httpx.Json4sSupport
 
+import scala.concurrent.Future
+
 trait PersonWebService extends WebServiceTrait with Json4sSupport {
 
   val json3sFormats = DefaultFormats
@@ -18,7 +20,11 @@ trait PersonWebService extends WebServiceTrait with Json4sSupport {
   val entityServiceRoutes = {
     pathPrefix("person") {
       pathEndOrSingleSlash {
-        get(ctx => ctx.complete((entityServiceWorker ? FIND_ALL).mapTo[List[Person]]))
+        get {
+              complete {
+                (entityServiceWorker ? FIND_ALL).mapTo[Future[List[Person]]]
+              }
+        }
       }
     }
   }

@@ -7,7 +7,7 @@ case class Person(id: Int, name: String, surname: String)
 
 object PersonDao {
 
-  def getAll: Future[List[Person]] = Future[List[Person]] {
-    List[Person](Person(1, "Bilal", "Alp"), Person(2, "Ahmet", "Alp"))
+  def getAll: Future[List[Person]] = Future {
+    List(Person(1, "Bilal", "Alp"), Person(2, "Ahmet", "Alp"))
   }
 }
