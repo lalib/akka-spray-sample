@@ -1,14 +1,12 @@
 package com.bilalalp.akkakafka.server
 
 import akka.util.Timeout
-
+import org.json4s.NoTypeHints
+import org.json4s.native.Serialization._
 import spray.routing.HttpService
 
 import scala.concurrent.duration._
 import scala.language.postfixOps
-
-import org.json4s.NoTypeHints
-import org.json4s.native.Serialization._
 
 trait WebServiceTrait extends HttpService {
 
