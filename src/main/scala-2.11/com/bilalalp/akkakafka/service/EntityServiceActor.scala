@@ -5,7 +5,7 @@ import com.bilalalp.akkakafka.model.PersonDao
 import com.bilalalp.akkakafka.service.ServiceOperation.FIND_ALL
 
 import scala.concurrent.ExecutionContext.Implicits.global
-
+import akka.pattern.pipe
 import scala.util.{Failure, Success}
 
 object ServiceOperation {
@@ -19,11 +19,8 @@ class EntityServiceActor extends Actor {
   override def receive: Receive = {
 
     case FIND_ALL =>
-      sender() ! (
-        PersonDao.getAll onComplete {
-          case Success(list) => list
-          case Failure(err) => List()
-        }
-        )
+      sender ! PersonDao.getAll
+        .recover({ case err => List() /* could log error here */ })
+        .pipeTo(sender)
   }
 }
