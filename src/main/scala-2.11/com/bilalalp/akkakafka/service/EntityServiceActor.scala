@@ -22,7 +22,7 @@ class EntityServiceActor extends Actor {
       sender() ! (
         PersonDao.getAll onComplete {
           case Success(list) => list
-          case Failure(err) => List
+          case Failure(err) => List()
         }
         )
   }
