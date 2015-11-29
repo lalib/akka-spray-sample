@@ -1,8 +1,8 @@
-package com.bilalalp.akkakafka
+package com.bilalalp.akkaspray
 
 import akka.actor.{ActorRef, ActorSystem, Props}
 import akka.io.IO
-import com.bilalalp.akkakafka.server.ServerSupervisor
+import com.bilalalp.akkaspray.server.ServerSupervisor
 import spray.can.Http
 
 

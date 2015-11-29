@@ -1,4 +1,4 @@
-package com.bilalalp.akkakafka.server
+package com.bilalalp.akkaspray.server
 
 import akka.util.Timeout
 import org.json4s.NoTypeHints

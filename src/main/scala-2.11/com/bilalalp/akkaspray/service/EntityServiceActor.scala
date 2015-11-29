@@ -1,9 +1,9 @@
-package com.bilalalp.akkakafka.service
+package com.bilalalp.akkaspray.service
 
 import akka.actor.Actor
 import akka.pattern.pipe
-import com.bilalalp.akkakafka.model.PersonDao
-import com.bilalalp.akkakafka.service.ServiceOperation.FIND_ALL
+import com.bilalalp.akkaspray.model.PersonDao
+import com.bilalalp.akkaspray.service.ServiceOperation.FIND_ALL
 
 import scala.concurrent.ExecutionContext.Implicits.global
 

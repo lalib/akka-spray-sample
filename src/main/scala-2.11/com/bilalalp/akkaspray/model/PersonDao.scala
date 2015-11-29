@@ -1,4 +1,4 @@
-package com.bilalalp.akkakafka.model
+package com.bilalalp.akkaspray.model
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

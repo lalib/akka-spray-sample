@@ -1,4 +1,4 @@
-package com.bilalalp.akkakafka
+package com.bilalalp.akkaspray
 
 import com.typesafe.config.ConfigFactory
 

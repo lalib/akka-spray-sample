@@ -1,4 +1,4 @@
-name := "akka-kafka"
+name := "akka-spray"
 
 version := "1.0"
 

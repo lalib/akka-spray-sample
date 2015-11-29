@@ -1,7 +1,7 @@
-package com.bilalalp.akkakafka.server
+package com.bilalalp.akkaspray.server
 
 import akka.actor.{Actor, ActorRefFactory}
-import com.bilalalp.akkakafka.webservice.PersonWebService
+import com.bilalalp.akkaspray.webservice.PersonWebService
 import spray.routing.RejectionHandler.Default
 
 
